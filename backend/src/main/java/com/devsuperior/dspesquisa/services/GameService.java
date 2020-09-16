@@ -18,7 +18,7 @@ public class GameService {
 	@Autowired
 	private GameRepository repository;
 	
-	@Transactional
+	@Transactional(readOnly = true)
 	public List<GameDTO> findAll(){
 		
 		List<Game> list = repository.findAll();
